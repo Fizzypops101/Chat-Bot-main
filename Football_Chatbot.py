@@ -7,15 +7,15 @@ def welcome():
   else:
     print("Okay, thank you. Bye.")
 
-# match status - to implement API
+# match status
 def match():
   futureMatch = input("Would you like some more information on upcoming matches? ")
-  if futureMatch.lower() == "yes":
+  if futureMatch.lower() == "yes": # make it case sensitive 
     print("Here are the upcoming 3 matches: Tottenham Vs Everton on 3rd April 2022. Tottenham Vs Brighton on 8th April 2022. Tottenham Vs Bournemouth on 15th April 2022")
     ans = input("Is there anything else I can help you with? ")
-    if ans.lower() == "yes":
+    if ans.lower() == "yes": # make it case sensitive 
       previousMatch = input("Have you seen the last game? ")
-      if previousMatch.lower() == "no":
+      if previousMatch.lower() == "no": # make it case sensitive 
         print(lastMatch())
         ans = input("Is there anything else you would like to know about? ")
         print(welcome())
@@ -56,9 +56,9 @@ def moreInfo():
 def keywordSearch(word):
   listOfKeywords = ["match", "player", "status", "ranking", "team", "scores", "assists"]
   if word in listOfKeywords:
-    if word.lower() == "match":
+    if word.lower() == "match": # make it case sensitive 
       print(match())
-    elif word.lower() == "ranking":
+    elif word.lower() == "ranking": # make it case sensitive 
       print(rankings())
     else:
       welcome()
